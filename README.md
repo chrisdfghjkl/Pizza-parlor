@@ -7,3 +7,11 @@ Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
 Test: "It should return a Pizza object with six properties for toppings, size, and price"
 Code: let myPizza = new Pizza("Small", "Pesto", "Fresh Mozzarella", ["sausage","anchovies"],["cherry tomatoes", "olives"],)
 Expected Output: Pizza {size: 'Small', premiumSauce: 'Pesto', premiumCheese: 'Fresh Mozzarella', meatTopping: Array(2), veggieTopping: Array(2), …}
+
+
+Describe Pizza.prototype.calcPrice();
+
+Test: "It should return a price based on Pizza object values"
+Code: let myPizza = new Pizza("Small", "Pesto", "Fresh Mozzarella", ["sausage","anchovies"],["cherry tomatoes", "olives"],)
+myPizza.calcPrice();
+Expected Output: 22
