@@ -6,5 +6,5 @@ function Pizza(size, premiumSauce, premiumCheese, meatTopping, veggieTopping, pr
   this.premiumCheese = premiumCheese;
   this.meatTopping = meatTopping;
   this.veggieTopping = veggieTopping;
-  this.price = 0;
+  this.price = 10;
 }
