@@ -11,7 +11,7 @@ function Pizza(size, premiumSauce, premiumCheese, meatTopping, veggieTopping, pr
 
 Pizza.prototype.calcPrice = function() {
   if (this.size !== "Small") {
-      this.price += 2;
+      this.price += 5;
   }
   if (this.premiumSauce !== undefined) {
       this.price += 1;
