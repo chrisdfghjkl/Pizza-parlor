@@ -26,3 +26,5 @@ Pizza.prototype.calcPrice = function() {
       this.price = this.price + this.veggieTopping.length * 2;
   }
 }
+
+// User Interface Logic ----------------
