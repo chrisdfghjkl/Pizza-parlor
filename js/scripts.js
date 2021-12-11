@@ -54,5 +54,8 @@ $(document).ready(function() {
     let pizzaOrder = new Pizza(pizzaSize, pizzaSauce, pizzaCheese, pizzaMeat, pizzaVeg, pizzaPrice);
     let finalTotal = pizzaOrder.calcPrice();
 
+    console.log(pizzaOrder);
+    console.log(finalTotal);
+
   });
 });
