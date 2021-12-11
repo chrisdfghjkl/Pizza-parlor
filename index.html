@@ -21,7 +21,7 @@
         <label for="pie-size">Choose a size:</label>
         <p class="add-on">10" Small - $10, 18" Large - $15</p>
         <select id="pie-size" class="form-control">
-          <option>-----</option>
+          <option></option>
           <option>Small</option>
           <option>Large</option>
         </select>
@@ -29,7 +29,7 @@
       <div class="form-group">
         <label for="pie-sauce">Choose a premium sauce <span class="add-on">add $1</span></label>
         <select id="pie-sauce" class="form-control">
-          <option>-----</option>
+          <option></option>
           <option>Pesto</option>
           <option>BBQ</option>
           <option>Buffalo</option>
@@ -39,12 +39,38 @@
       <div class="form-group">
         <label for="pie-cheese">Choose a premium cheese <span class="add-on">add $1</span></label>
         <select id="pie-cheese" class="form-control">
-          <option>-----</option>
+          <option></option>
           <option>Fresh mozzarella</option>
           <option>Burrata</option>
           <option>Ricotta</option>
         </select>
       </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="pie-meat">Choose meat toppings <span class="add-on">$3/each</span></label><br>
+            <input type="checkbox" name="meat" value="Pepperoni"> Pepperoni <br>
+            <input type="checkbox" name="meat" value="Sausage"> Sausage <br>
+            <input type="checkbox" name="meat" value="Bacon"> Bacon <br>
+            <input type="checkbox" name="meat" value="Chicken"> Chicken <br>
+            <input type="checkbox" name="meat" value="Ham"> Ham <br>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="pie-veggie">Choose veggie toppings <span class="add-on">$2/each</span></label><br>
+            <input type="checkbox" name="veggie" value="Peppers"> Peppers <br>
+            <input type="checkbox" name="veggie" value="Onions"> Onions <br>
+            <input type="checkbox" name="veggie" value="Olives"> Olives <br>
+            <input type="checkbox" name="veggie" value="Mushrooms"> Mushrooms <br>
+            <input type="checkbox" name="veggie" value="Pineapple"> Pineapple <br>
+            <input type="checkbox" name="veggie" value="Roasted Garlic"> Roasted Garlic <br>
+            <input type="checkbox" name="veggie" value="Jalapeños"> Jalapeños <br>
+            <input type="checkbox" name="veggie" value="Banana Peppers"> Banana Peppers <br>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">Checkout</button>
     </form>
   </div>
 </body>
