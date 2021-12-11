@@ -13,10 +13,10 @@ Pizza.prototype.calcPrice = function() {
   if (this.size !== "Small") {
       this.price += 5;
   }
-  if (this.premiumSauce !== undefined) {
+  if (this.premiumSauce !== "") {
       this.price += 1;
   }
-  if (this.premiumCheese !== undefined) {
+  if (this.premiumCheese !== "") {
       this.price += 1;
   }
   if (this.meatTopping.length > 0) {
