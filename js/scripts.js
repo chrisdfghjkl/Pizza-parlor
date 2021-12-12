@@ -13,10 +13,10 @@ Pizza.prototype.calcPrice = function() {
   if (this.size !== "Small") {
       this.price += 5;
   }
-  if (this.premiumSauce !== "") {
+  if (this.premiumSauce !== "N/A") {
       this.price += 1;
   }
-  if (this.premiumCheese !== "") {
+  if (this.premiumCheese !== "N/A") {
       this.price += 1;
   }
   if (this.meatTopping.length > 0) {
@@ -25,7 +25,7 @@ Pizza.prototype.calcPrice = function() {
   if (this.veggieTopping.length > 0) {
       this.price = this.price + this.veggieTopping.length * 2; // ----------- meat and veggie choices need to push to array for method to work 
   }
-}
+};
 
 // User Interface Logic ----------------
 
