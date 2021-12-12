@@ -12,68 +12,70 @@
     <div class="jumbotron">
       <h1 class="header">Big Dough Pizza</h1>
     </div>
-    <div class="build-your-own">
-      <h2 id="build-header" class="build-your-own">Build your own pizza:</h2>
-      <p>(All pizzas topped with red sauce and whole milk mozzarella unless selected otherwise)</p>
+    <div id="hider">
+      <div class="build-your-own">
+        <h2 id="build-header" class="build-your-own">Build your own pizza:</h2>
+        <p>(All pizzas topped with red sauce and whole milk mozzarella unless selected otherwise)</p>
+      </div>
+      <form id="pie-builder">
+        <div class="form-group">
+          <label id="label" for="pie-size">Choose a size:</label>
+          <p class="add-on">10" Small - $10, 18" Large - $15</p>
+          <select id="pie-size" class="form-control">
+            <option>N/A</option>
+            <option>Small</option>
+            <option>Large</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label id="label" for="pie-sauce">Choose a premium sauce <span class="add-on">(add $1)</span></label>
+          <select id="pie-sauce" class="form-control">
+            <option>N/A</option>
+            <option>Pesto</option>
+            <option>BBQ</option>
+            <option>Buffalo</option>
+            <option>White truffle oil & garlic</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label id="label" for="pie-cheese">Choose a premium cheese <span class="add-on">(add $1)</span></label>
+          <select id="pie-cheese" class="form-control">
+            <option>N/A</option>
+            <option>Fresh mozzarella</option>
+            <option>Burrata</option>
+            <option>Ricotta</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label id="label" for="pie-meat">Choose meat toppings</label>
+              <p class="add-on">$3/each</p>
+              <input type="checkbox" name="meat" value="Pepperoni"> Pepperoni <br>
+              <input type="checkbox" name="meat" value="Sausage"> Sausage <br>
+              <input type="checkbox" name="meat" value="Bacon"> Bacon <br>
+              <input type="checkbox" name="meat" value="Chicken"> Chicken <br>
+              <input type="checkbox" name="meat" value="Ham"> Ham <br>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label id="label" for="pie-vegdhj">Choose veggie toppings</label>
+              <p class="add-on">$3/each</p>
+              <input type="checkbox" name="veg" value="Peppers"> Peppers <br>
+              <input type="checkbox" name="veg" value="Onions"> Onions <br>
+              <input type="checkbox" name="veg" value="Olives"> Olives <br>
+              <input type="checkbox" name="veg" value="Mushrooms"> Mushrooms <br>
+              <input type="checkbox" name="veg" value="Pineapple"> Pineapple <br>
+              <input type="checkbox" name="veg" value="Roasted Garlic"> Roasted Garlic <br>
+              <input type="checkbox" name="veg" value="Jalapeños"> Jalapeños <br>
+              <input type="checkbox" name="veg" value="Banana Peppers"> Banana Peppers <br>
+            </div>
+          </div>
+        </div>
+        <button id="button" type="submit" class="btn btn-danger">Checkout</button>
+      </form>
     </div>
-    <form id="pie-builder">
-      <div class="form-group">
-        <label id="label" for="pie-size">Choose a size:</label>
-        <p class="add-on">10" Small - $10, 18" Large - $15</p>
-        <select id="pie-size" class="form-control">
-          <option>N/A</option>
-          <option>Small</option>
-          <option>Large</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label id="label" for="pie-sauce">Choose a premium sauce <span class="add-on">(add $1)</span></label>
-        <select id="pie-sauce" class="form-control">
-          <option>N/A</option>
-          <option>Pesto</option>
-          <option>BBQ</option>
-          <option>Buffalo</option>
-          <option>White truffle oil & garlic</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label id="label" for="pie-cheese">Choose a premium cheese <span class="add-on">(add $1)</span></label>
-        <select id="pie-cheese" class="form-control">
-          <option>N/A</option>
-          <option>Fresh mozzarella</option>
-          <option>Burrata</option>
-          <option>Ricotta</option>
-        </select>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="form-group">
-            <label id="label" for="pie-meat">Choose meat toppings</label>
-            <p class="add-on">$3/each</p>
-            <input type="checkbox" name="meat" value="Pepperoni"> Pepperoni <br>
-            <input type="checkbox" name="meat" value="Sausage"> Sausage <br>
-            <input type="checkbox" name="meat" value="Bacon"> Bacon <br>
-            <input type="checkbox" name="meat" value="Chicken"> Chicken <br>
-            <input type="checkbox" name="meat" value="Ham"> Ham <br>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="form-group">
-            <label id="label" for="pie-vegdhj">Choose veggie toppings</label>
-            <p class="add-on">$3/each</p>
-            <input type="checkbox" name="veg" value="Peppers"> Peppers <br>
-            <input type="checkbox" name="veg" value="Onions"> Onions <br>
-            <input type="checkbox" name="veg" value="Olives"> Olives <br>
-            <input type="checkbox" name="veg" value="Mushrooms"> Mushrooms <br>
-            <input type="checkbox" name="veg" value="Pineapple"> Pineapple <br>
-            <input type="checkbox" name="veg" value="Roasted Garlic"> Roasted Garlic <br>
-            <input type="checkbox" name="veg" value="Jalapeños"> Jalapeños <br>
-            <input type="checkbox" name="veg" value="Banana Peppers"> Banana Peppers <br>
-          </div>
-        </div>
-      </div>
-      <button id="button" type="submit" class="btn btn-danger">Checkout</button>
-    </form>
     <div class="row">
       <div class="col-md-6">
         <div class="bill-details">
@@ -85,6 +87,8 @@
           <p>Veggie toppings: <span id="veg"></span></p>
           <br>
           <h5>Total: $<span id="price"></span></h5>
+          <br>
+          <button id="new-order" type="click" class="btn btn-danger">New Order</button>
         </div>
       </div>
     </div>
