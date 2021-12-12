@@ -1,6 +1,6 @@
 // Business Logic -----------------
 
-function Pizza(size, premiumSauce, premiumCheese, meatTopping, veggieTopping, price) {
+function Pizza(size, premiumSauce, premiumCheese, meatTopping, veggieTopping) {
   this.size = size;
   this.premiumSauce = premiumSauce;
   this.premiumCheese = premiumCheese;
@@ -52,10 +52,10 @@ $(document).ready(function() {
     });
 
     let pizzaOrder = new Pizza(pizzaSize, pizzaSauce, pizzaCheese, pizzaMeat, pizzaVeg, pizzaPrice);
-    let finalTotal = pizzaOrder.calcPrice();
+    pizzaOrder.calcPrice();
 
     console.log(pizzaOrder);
-    console.log(finalTotal);
+    console.log(pizzaOrder.price);
 
   });
 });
