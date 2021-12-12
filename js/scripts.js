@@ -9,18 +9,31 @@ function Pizza(size, premiumSauce, premiumCheese, meatTopping, veggieTopping) {
   this.price = 10;
 }
 
-Pizza.prototype.noTopping = function() {
+Pizza.prototype.toppingDisplay = function() {
   if (this.meatTopping.length === 0) {
     this.meatTopping = "N/A";
+  } else if (this.meatTopping.length > 0) {
+    this.meatTopping = this.meatTopping.join(", ");
   }
   if (this.veggieTopping.length === 0) {
     this.veggieTopping = "N/A";
+  } else if (this.veggieTopping.length > 0) {
+    this.veggieTopping = this.veggieTopping.join(", ");
   }
 };
 
+/*Pizza.prototype.toppingDisplay = function() {
+  this.meatTopping = this.meatTopping.join(", ");
+  this.veggieTopping = this.veggieTopping.join(", ");
+};*/
+
 Pizza.prototype.calcPrice = function() {
-  if (this.size !== "Small") {
-      this.price += 5;
+  if (this.size === "Small") {
+    this.price += 0;
+  } else if (this.size === "Large") {
+    this.price += 5
+  } else if (this.size === "N/A") {
+    this.price = 0
   }
   if (this.premiumSauce !== "N/A") {
       this.price += 1;
@@ -61,10 +74,18 @@ $(document).ready(function() {
     });
 
     let pizzaOrder = new Pizza(pizzaSize, pizzaSauce, pizzaCheese, pizzaMeat, pizzaVeg, pizzaPrice);
+    
     pizzaOrder.calcPrice();
+    pizzaOrder.toppingDisplay();
+    
 
-    console.log(pizzaOrder);
-    console.log(pizzaOrder.price);
+    $("#size").html(pizzaOrder.size);
+    $("#sauce").html(pizzaOrder.premiumSauce);
+    $("#cheese").html(pizzaOrder.premiumCheese);
+    $("#meat").html(pizzaOrder.meatTopping);
+    $("#veg").html(pizzaOrder.veggieTopping);
+
+    $("#price").html(pizzaOrder.price + ".00");
 
   });
 });
