@@ -9,6 +9,15 @@ function Pizza(size, premiumSauce, premiumCheese, meatTopping, veggieTopping) {
   this.price = 10;
 }
 
+Pizza.prototype.noTopping = function() {
+  if (this.meatTopping.length === 0) {
+    this.meatTopping = "N/A";
+  }
+  if (this.veggieTopping.length === 0) {
+    this.veggieTopping = "N/A";
+  }
+};
+
 Pizza.prototype.calcPrice = function() {
   if (this.size !== "Small") {
       this.price += 5;
