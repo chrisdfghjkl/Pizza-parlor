@@ -87,5 +87,13 @@ $(document).ready(function() {
 
     $("#price").html(pizzaOrder.price + ".00");
 
+    $(".bill-details").slideDown();
+    $("#hider").slideUp();
+    $("#new-order").fadeIn();
+
+    $("#new-order").click(function() {
+      location.reload();
+    });
+
   });
 });
