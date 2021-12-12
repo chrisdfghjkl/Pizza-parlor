@@ -45,3 +45,12 @@ body {
 #button {
   margin-bottom: 20px;
 }
+
+.bill-details {
+  display: none;
+  border: 2px solid #eeee;
+  padding: 12px;
+  background-color: #eeee;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
