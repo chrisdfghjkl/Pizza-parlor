@@ -22,11 +22,6 @@ Pizza.prototype.toppingDisplay = function() {
   }
 };
 
-/*Pizza.prototype.toppingDisplay = function() {
-  this.meatTopping = this.meatTopping.join(", ");
-  this.veggieTopping = this.veggieTopping.join(", ");
-};*/
-
 Pizza.prototype.calcPrice = function() {
   if (this.size === "Small") {
     this.price += 0;
@@ -45,7 +40,7 @@ Pizza.prototype.calcPrice = function() {
       this.price = this.price + this.meatTopping.length * 3;
   }
   if (this.veggieTopping.length > 0) {
-      this.price = this.price + this.veggieTopping.length * 2; // ----------- meat and veggie choices need to push to array for method to work 
+      this.price = this.price + this.veggieTopping.length * 2;  
   }
 };
 
@@ -62,8 +57,6 @@ $(document).ready(function() {
     const pizzaVeg = [];
     const pizzaPrice = 10;
 
-    /* Template: $("input:checkbox[name=type]:checked").each(function(){
-    yourArray.push($(this).val()); ---------- to test, bookmark stackoverflow page if works */
 
     $("input:checkbox[name=meat]:checked").each(function(){
       pizzaMeat.push($(this).val());
